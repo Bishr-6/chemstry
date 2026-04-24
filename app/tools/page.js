@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { Beaker, BookOpen, Zap, Molecule2, Atom } from 'lucide-react';
+import { Beaker, BookOpen, Zap, FlaskConical as Molecule2, Atom } from 'lucide-react';
 
 export const metadata = {
   title: 'الأدوات - خزانة الكيمياء الرقمية',
