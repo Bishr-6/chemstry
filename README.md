@@ -1,36 +1,225 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧪 خزانة الكيمياء الرقمية (Digital Chemistry Cabinet)
 
-## Getting Started
+منصة تعليمية متكاملة وحديثة للكيمياء الكهربائية والعضوية مع **أدوات تفاعلية متقدمة** وقاعدة بيانات شاملة تخدم **المعلمين والطلاب**.
 
-First, run the development server:
+## ✨ المميزات الرئيسية
+
+### 🔋 أدوات الكيمياء الكهربائية
+- **حاسبة جهد الخلية**: حساب E°cell مع تحديد التلقائية تلقائياً
+- **محاكي التحليل الكهربائي**: اكتشف نواتج التحليل الكهربائي للأملاح المختلفة
+- **دليل منع التآكل**: الجلفنة، الحماية الكاثودية، والطلاء
+
+### 🏗️ أدوات الهيدروكربونات
+- **مدرب التسمية IUPAC**: تعلم قواعس التسمية مع أمثلة تفاعلية
+- **كاشف الأيزومرات**: الأيزومرات البنائية والفراغية والضوئية
+- **المركبات الأروماتية**: البنزين ومشتقاته والخصائص
+
+### 🧬 مشتقات الهيدروكربونات
+- **كاشف المجموعات الوظيفية**: 11 مجموعة وظيفية مع خصائصها الكاملة
+- **دليل إعادة تدوير البوليمرات**: رموز التدوير والمونومرات والاستخدامات
+- **الكيمياء في حياتنا**: تطبيقات عملية واقعية
+
+### 💾 قاعدة بيانات شاملة
+- **100+ مادة كيميائية** مع معلومات مفصلة
+- **البحث المتقدم** والتصفية حسب الفئات
+- **معلومات علمية دقيقة**: الصيغ، الأوزان المولية، درجات الغليان، الاستخدامات
+
+### 👨‍🏫 لوحة تحكم المعلم
+- إضافة وتعديل المواد الكيميائية
+- إدارة الفئات والتجارب العملية
+- عرض الإحصائيات والتحليلات
+- إدارة حسابات الطلاب
+
+## 🚀 البدء السريع
+
+### المتطلبات
+- Node.js 18+ و npm/yarn
+- حساب Supabase مجاني
+- حساب Vercel (اختياري للنشر)
+
+### التثبيت
 
 ```bash
+# 1. انسخ المشروع وانتقل إليه
+cd chemstry
+
+# 2. ثبت المكتبات
+npm install
+
+# 3. أنشئ ملف .env.local
+# انسخ المتغيرات من التعليمات
+
+# 4. شغل خادم التطوير
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 5. افتح المتصفح على:
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### إعداد Supabase
+[اتبع التعليمات في SETUP_GUIDE.md](./SETUP_GUIDE.md)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 البنية التقنية
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+Stack Technology:
+├── Frontend:    Next.js 16 + React 19 + Tailwind CSS
+├── Backend:     Supabase (PostgreSQL)
+├── Hosting:     Vercel
+├── Icons:       Lucide React
+└── State:       React Hooks
+```
 
-## Learn More
+## 📂 بنية المشروع
 
-To learn more about Next.js, take a look at the following resources:
+```
+chemstry/
+├── app/                          # صفحات التطبيق
+│   ├── page.js                   # الصفحة الرئيسية
+│   ├── layout.js                 # التخطيط الأساسي
+│   ├── tools/                    # الأدوات التفاعلية
+│   │   ├── electrochemistry/    # الكيمياء الكهربائية
+│   │   ├── hydrocarbons/        # الهيدروكربونات
+│   │   └── derivatives/         # المشتقات
+│   ├── substances/              # قاعدة البيانات
+│   ├── dashboard/               # لوحة التحكم
+│   └── globals.css             # الأنماط
+├── components/                   # المكونات القابلة لإعادة الاستخدام
+│   ├── Header.jsx
+│   ├── SearchBar.jsx
+│   ├── CellVoltageCalculator.jsx
+│   ├── ElectrolysisSimulator.jsx
+│   ├── IUPACNamingTrainer.jsx
+│   ├── FunctionalGroupExplorer.jsx
+│   └── PolymerRecyclingGuide.jsx
+├── lib/                        # المساعدات والثوابت
+│   ├── supabase.js
+│   ├── constants.js
+│   └── calculations.js
+├── DATABASE_SCHEMA.sql         # schema قاعدة البيانات
+├── SETUP_GUIDE.md              # دليل الإعداد
+├── DEVELOPER_GUIDE.md          # دليل المطور
+├── PRACTICAL_EXAMPLES.md       # أمثلة عملية
+└── package.json               # المكتبات
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 الاستخدام
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### للطلاب
+1. استكشف الأقسام الرئيسية من الصفحة الرئيسية
+2. استخدم شريط البحث للعثور على مواد محددة
+3. جرب الأدوات التفاعلية لفهم المفاهيم
+4. استعرض قاعدة البيانات الكاملة
 
-## Deploy on Vercel
+### للمعلمين
+1. الدخول إلى `/dashboard` لوحة التحكم
+2. إضافة مواد كيميائية جديدة
+3. إنشاء تجارب عملية
+4. مراقبة تقدم الطلاب
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 الدليل الشامل
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| الملف | الغرض |
+|------|-------|
+| [SETUP_GUIDE.md](./SETUP_GUIDE.md) | دليل التثبيت والإعداد الكامل |
+| [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md) | دليل للمطورين وإضافة مميزات جديدة |
+| [PRACTICAL_EXAMPLES.md](./PRACTICAL_EXAMPLES.md) | أمثلة عملية لاستخدام المنصة |
+| [DATABASE_SCHEMA.sql](./DATABASE_SCHEMA.sql) | schema قاعدة البيانات الكاملة |
+
+## 🧮 الصيغ المستخدمة
+
+### جهد الخلية
+```
+E°cell = E°cathode - E°anode
+```
+
+### الصيغ العامة
+```
+ألكان:    CnH₂ₙ₊₂
+ألكين:    CnH₂ₙ
+ألكاين:   CnH₂ₙ₋₂
+```
+
+### تسمية IUPAC
+1. اختر أطول سلسلة كربونية
+2. رقّم من الطرف الأقرب للمجموعة البديلة
+3. ضع أسماء المجموعات قبل الاسم الأساسي
+
+## 📊 البيانات المتوفرة
+
+### الفئات الرئيسية (12 فئة)
+- ألكانات، ألكينات، ألكاينات
+- مركبات عطرية، كحولات، إيثرات
+- أمينات، كربونيلات، إسترات، أميدات
+- بوليمرات، كيمياء كهربائية
+
+### المعادن (15 معدن)
+مع جهود الاختزال (E°) الدقيقة
+
+### البوليمرات (7 أنواع)
+مع رموز التدوير والاستخدامات
+
+### المجموعات الوظيفية (11 مجموعة)
+مع الخصائص والاتجاهات الحرارية
+
+## 🔧 التطوير المستقبلي
+
+### المميزات المخطط إضافتها
+- [ ] فلاش كاردز تفاعلية
+- [ ] نماذج جزيئية ثلاثية الأبعاد
+- [ ] مختبر تحليل البيانات
+- [ ] اختبارات موازية SAT
+- [ ] نظام المحادثة الذكية (AI)
+- [ ] تطبيق جوال (React Native)
+- [ ] نظام الشهادات والنقاط
+
+## 🐛 استكشاف الأخطاء
+
+### البيانات لا تظهر؟
+✓ تحقق من متغيرات البيئة
+✓ تأكد من تشغيل SQL Schema
+✓ تحقق من صلاحيات الجداول
+
+### الأداة لا تعمل؟
+✓ افتح Developer Console (F12)
+✓ تحقق من الأخطاء
+✓ أعد تشغيل خادم التطوير
+
+## 📞 الدعم
+
+- **Documentation**: [SETUP_GUIDE.md](./SETUP_GUIDE.md) و [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md)
+- **Issues**: أنشئ issue على GitHub
+- **Examples**: اقرأ [PRACTICAL_EXAMPLES.md](./PRACTICAL_EXAMPLES.md)
+
+## 📄 الترخيص
+
+MIT License - استخدم بحرية للأغراض التعليمية والتجارية
+
+## 🙏 شكر خاص
+
+- مصادر الكيمياء التعليمية والكتب الدراسية
+- معايير التعليم العالي
+- المعلمين والطلاب على الملاحظات والتحسينات
+
+---
+
+## 🎓 نصائح التعلم
+
+### للطلاب
+1. جرب كل أداة عدة مرات
+2. استخدم البحث لاستكشاف مواد جديدة
+3. اربط بين المفاهيم المختلفة
+4. اكتب ملاحظاتك الخاصة
+
+### للمعلمين
+1. أضف مواد تناسب منهاجك
+2. استخدم الأدوات في العروض التقديمية
+3. شجع الطلاب على الاستكشاف الذاتي
+4. ربط النظرية بالتطبيقات العملية
+
+---
+
+**آخر تحديث**: أبريل 2024
+**الإصدار**: 1.0.0 (Beta)
+
+### استمتع بمنصة تعليمية متقدمة! 🧪🔬
